@@ -48,47 +48,48 @@ const Nav = () => {
                     to={to}
                     href={href}
                     onClick={() => setIsOpen(false)}
-                    className="group flex items-center justify-between py-5 border-b border-white/10 w-full"
+                    className="group flex items-center justify-between py-5 border-b border-surface/10 w-full"
                 >
-                    <span className="text-2xl font-display font-bold uppercase tracking-tighter text-white group-hover:text-neutral-400 transition-colors">
+                    <span className="text-2xl font-display font-bold uppercase tracking-tighter text-surface group-hover:text-soft transition-colors">
                         {item.name}
                     </span>
-                    <ArrowRight size={20} className="text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
+                    <ArrowRight size={20} className="text-surface opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
                 </Tag>
             </motion.div>
         );
     };
 
     return (
-        <nav className="fixed top-0 w-full z-[10000] bg-white border-b border-black/5">
+        <nav className="fixed top-0 w-full z-[10000] bg-card/90 backdrop-blur-md border-b border-border shadow-card text-foreground">
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <Link to="/" onClick={() => setIsOpen(false)} className="font-mono font-bold text-black tracking-widest text-lg uppercase flex items-center gap-2 z-[70]">
-                    <div className="w-3 h-3 bg-black rounded-full animate-pulse" />
-                    Prasad Kadam
+                <Link to="/" onClick={() => setIsOpen(false)} className="font-mono font-bold text-foreground tracking-widest text-lg uppercase flex items-center gap-2 z-[70]">
+                    <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
+                    <span>Prasad Kadam</span>
+                    <span className="hidden sm:inline-flex text-[10px] font-semibold px-2 py-1 rounded-full border border-border bg-card/60 text-soft">Available</span>
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex gap-10 text-[11px] text-neutral-500 items-center">
+                <div className="hidden md:flex gap-10 text-[11px] text-muted items-center">
                     {navItems.map(item => (
                         <a
                             key={item.name}
                             href={`/#/${item.id}`}
-                            className="font-bold uppercase tracking-[0.2em] hover:text-black transition-colors relative group py-2"
+                            className="font-bold uppercase tracking-[0.2em] hover:text-foreground transition-colors relative group py-2"
                         >
                             {item.name}
-                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full" />
+                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                         </a>
                     ))}
-                    <Link to="/pricing" className="hover:text-black transition-colors relative group py-2 text-green-600 font-bold uppercase tracking-[0.2em]">
+                    <Link to="/pricing" className="hover:text-foreground transition-colors relative group py-2 text-primary font-bold uppercase tracking-[0.2em]">
                         Pricing
-                        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-600 transition-all duration-300 group-hover:w-full" />
+                        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                     </Link>
                 </div>
 
                 {/* Mobile Toggle */}
                 <button
                     onClick={toggleMenu}
-                    className={`md:hidden p-2 z-[100] transition-colors rounded-lg flex items-center gap-2 ${isOpen ? 'text-white hover:bg-white/10' : 'text-black hover:bg-neutral-100'}`}
+                    className={`md:hidden p-2 z-[100] transition-colors rounded-lg flex items-center gap-2 ${isOpen ? 'text-surface hover:bg-surface/10' : 'text-ink hover:bg-surface-muted'}`}
                     aria-label="Toggle Menu"
                 >
                     <span className="text-[10px] font-bold uppercase tracking-widest hidden sm:block">
@@ -120,18 +121,18 @@ const Nav = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsOpen(false)}
-                            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[80] md:hidden"
+                            className="fixed inset-0 bg-contrast/60 backdrop-blur-sm z-[80] md:hidden"
                         />
                         <motion.div
                             variants={menuVariants}
                             initial="closed"
                             animate="open"
                             exit="closed"
-                            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-black z-[90] md:hidden p-8 flex flex-col shadow-2xl border-l border-white/10"
+                            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-contrast text-surface z-[90] md:hidden p-8 flex flex-col border-l border-surface/10 shadow-card"
                         >
                             <div className="flex flex-col h-full overflow-y-auto">
-                                <div className="text-neutral-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-8 flex items-center gap-3 shrink-0">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                                <div className="text-soft text-[10px] font-bold uppercase tracking-[0.3em] mb-8 flex items-center gap-3 shrink-0">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
                                     Navigation Hub
                                 </div>
 
@@ -141,31 +142,31 @@ const Nav = () => {
                                         <Link
                                             to="/pricing"
                                             onClick={() => setIsOpen(false)}
-                                            className="group flex items-center justify-between py-5 border-b border-white/10"
+                                            className="group flex items-center justify-between py-5 border-b border-surface/10"
                                         >
-                                            <span className="text-2xl font-display font-bold uppercase tracking-tighter text-green-500 group-hover:text-green-400 transition-colors">
+                                            <span className="text-2xl font-display font-bold uppercase tracking-tighter text-success group-hover:text-accent transition-colors">
                                                 Pricing
                                             </span>
-                                            <ArrowRight size={20} className="text-green-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
+                                            <ArrowRight size={20} className="text-success opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
                                         </Link>
                                     </motion.div>
                                 </div>
 
                                 <div className="mt-auto pt-10 space-y-8 shrink-0">
                                     <div className="space-y-4">
-                                        <div className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest">Connect</div>
+                                        <div className="text-soft text-[10px] font-bold uppercase tracking-widest">Connect</div>
                                         <div className="flex gap-6">
-                                            <a href="https://github.com/prasadkadam03" target="_blank" rel="noreferrer" className="text-white hover:text-neutral-400 transition-colors"><Github size={24} /></a>
-                                            <a href="https://www.linkedin.com/in/prasadkadam03/" target="_blank" rel="noreferrer" className="text-white hover:text-neutral-400 transition-colors"><Linkedin size={24} /></a>
-                                            <a href="mailto:prasadkadam29503@gmail.com" className="text-white hover:text-neutral-400 transition-colors"><Mail size={24} /></a>
+                                            <a href="https://github.com/prasadkadam03" target="_blank" rel="noreferrer" className="text-surface hover:text-soft transition-colors"><Github size={24} /></a>
+                                            <a href="https://www.linkedin.com/in/prasadkadam03/" target="_blank" rel="noreferrer" className="text-surface hover:text-soft transition-colors"><Linkedin size={24} /></a>
+                                            <a href="mailto:prasadkadam29503@gmail.com" className="text-surface hover:text-soft transition-colors"><Mail size={24} /></a>
                                         </div>
                                     </div>
 
-                                    <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
-                                        <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-2">System Status</div>
+                                    <div className="p-5 bg-surface/5 border border-surface/10 rounded-xl">
+                                        <div className="text-[10px] font-bold text-soft uppercase tracking-widest mb-2">System Status</div>
                                         <div className="flex items-center justify-between">
-                                            <span className="text-white text-xs font-mono">OPERATIONAL</span>
-                                            <span className="text-green-500 text-[10px] font-bold animate-pulse font-mono">100%</span>
+                                            <span className="text-surface text-xs font-mono">OPERATIONAL</span>
+                                            <span className="text-success text-[10px] font-bold animate-pulse font-mono">100%</span>
                                         </div>
                                     </div>
                                 </div>

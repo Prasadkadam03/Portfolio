@@ -191,11 +191,11 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="inline-flex items-center gap-3 px-4 py-2 bg-neutral-50 border border-neutral-200 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase"
+                            className="inline-flex items-center gap-3 px-4 py-2 bg-bg border border-border rounded-full text-[10px] font-bold tracking-[0.2em] uppercase"
                         >
                             <div className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-success"></span>
                             </div>
                             Portfolio Live
                         </motion.div>
@@ -208,7 +208,7 @@ const Home = () => {
                                 className="text-5xl md:text-9xl font-display font-bold leading-[0.9] tracking-tighter"
                             >
                                 PRASAD<br />
-                                <span className="outline-text text-transparent hover:text-black transition-colors duration-700">KADAM</span>
+                                <span className="outline-text text-transparent hover:text-ink transition-colors duration-700">KADAM</span>
                             </motion.h1>
                         </div>
 
@@ -216,7 +216,7 @@ const Home = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="text-lg md:text-2xl text-neutral-600 max-w-lg font-light leading-relaxed border-l-2 border-black pl-6"
+                            className="text-lg md:text-2xl text-muted max-w-lg font-light leading-relaxed border-l-2 border-contrast pl-6"
                         >
                             Full Stack Developer building React/TypeScript frontends and Node.js/Express APIs with JWT security, Zod validation, and tuned queries across MongoDB and SQL.
                         </motion.p>
@@ -227,25 +227,25 @@ const Home = () => {
                             transition={{ duration: 0.6, delay: 0.6 }}
                             className="flex flex-wrap gap-4 md:gap-6 pt-6"
                         >
-                            <a href="/#/work" className="group relative px-6 md:px-8 py-3 md:py-4 bg-black text-white font-bold uppercase tracking-widest text-[10px] md:text-xs overflow-hidden text-center">
-                                <span className="relative z-10 group-hover:text-black transition-colors duration-300">View Projects</span>
-                                <span className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
+                            <a href="/#/work" className="group relative px-6 md:px-8 py-3 md:py-4 bg-contrast text-surface font-bold uppercase tracking-widest text-[10px] md:text-xs overflow-hidden text-center">
+                                <span className="relative z-10 group-hover:text-ink transition-colors duration-300">View Projects</span>
+                                <span className="absolute inset-0 bg-surface transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
                             </a>
-                            <a href="/#/contact" className="group px-6 md:px-8 py-3 md:py-4 border border-black text-black font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-black hover:text-white transition-all duration-300 text-center">
+                            <a href="/#/contact" className="group px-6 md:px-8 py-3 md:py-4 border border-contrast text-ink font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-contrast hover:text-surface transition-all duration-300 text-center">
                                 Let's Talk
                             </a>
                         </motion.div>
                     </div>
 
                     <div className="relative pb-12 lg:pb-0">
-                        <div className="absolute -inset-4 bg-gradient-to-tr from-neutral-200 to-transparent rounded-full blur-3xl opacity-30 pointer-events-none" />
+                        <div className="absolute -inset-4 bg-gradient-to-tr from-border to-transparent rounded-full blur-3xl opacity-30 pointer-events-none" />
                         <TerminalWindow />
                     </div>
                 </div>
             </section>
 
             {/* Services Section */}
-            <section id="services" className="py-24 md:py-40 px-6 bg-neutral-50">
+            <section id="services" className="py-24 md:py-40 px-6 bg-bg">
                 <div className="max-w-7xl mx-auto">
                     <SectionHeading title="Services" subtitle="Full-stack delivery across UI engineering, API/auth layers, and reliable data models." />
 
@@ -258,14 +258,14 @@ const Home = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1, duration: 0.5 }}
                                 whileHover={{ y: -10 }}
-                                className="p-8 md:p-10 bg-white border border-neutral-200 hover:border-black hover:shadow-2xl transition-all duration-500 group"
+                                className="p-8 md:p-10 bg-surface border border-border hover:border-contrast hover:shadow-2xl transition-all duration-500 group"
                             >
-                                <div className="mb-6 md:mb-8 p-4 bg-neutral-50 w-fit rounded-xl group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                                <div className="mb-6 md:mb-8 p-4 bg-bg w-fit rounded-xl group-hover:bg-contrast group-hover:text-surface transition-colors duration-300">
                                     {s.icon}
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-display font-bold mb-4 uppercase tracking-tight">{s.title}</h3>
-                                <p className="text-sm md:text-base text-neutral-500 font-light leading-relaxed mb-8">{s.description}</p>
-                                <a href="/#/contact" className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-400 group-hover:text-black transition-colors cursor-pointer">
+                                <p className="text-sm md:text-base text-soft font-light leading-relaxed mb-8">{s.description}</p>
+                                <a href="/#/contact" className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-soft group-hover:text-ink transition-colors cursor-pointer">
                                     <div className="h-px w-4 bg-current" /> Explore
                                 </a>
                             </motion.div>
@@ -275,8 +275,8 @@ const Home = () => {
             </section>
 
             {/* Experience Section */}
-            <section id="experience" className="py-24 md:py-40 bg-black text-white px-6 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20" />
+            <section id="experience" className="py-24 md:py-40 bg-contrast text-surface px-6 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[linear-gradient(color-mix(in_srgb,var(--color-surface)_15%,transparent)_1px,transparent_1px),linear-gradient(90deg,color-mix(in_srgb,var(--color-surface)_15%,transparent)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20" />
                 <div className="max-w-7xl mx-auto relative z-10">
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -285,7 +285,7 @@ const Home = () => {
                         className="mb-16 md:mb-24"
                     >
                         <h2 className="text-4xl md:text-7xl font-display font-bold mb-6 tracking-tighter uppercase">Experience</h2>
-                        <div className="h-1 w-24 bg-white mb-8" />
+                        <div className="h-1 w-24 bg-surface mb-8" />
                     </motion.div>
 
                     <div className="space-y-12 md:space-y-20">
@@ -295,15 +295,15 @@ const Home = () => {
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className="grid md:grid-cols-12 gap-6 md:gap-10 border-t border-white/10 pt-10 group"
+                                className="grid md:grid-cols-12 gap-6 md:gap-10 border-t border-surface/10 pt-10 group"
                             >
                                 <div className="md:col-span-3">
-                                    <span className="font-mono text-sm tracking-[0.2em] text-neutral-500 group-hover:text-white transition-colors">{exp.period}</span>
+                                    <span className="font-mono text-sm tracking-[0.2em] text-soft group-hover:text-surface transition-colors">{exp.period}</span>
                                 </div>
                                 <div className="md:col-span-9">
                                     <h3 className="text-2xl md:text-3xl font-display font-bold uppercase mb-2">{exp.company}</h3>
-                                    <h4 className="text-lg md:text-xl text-neutral-400 mb-4 md:mb-6 flex items-center gap-2"><Briefcase size={18} /> {exp.role}</h4>
-                                    <p className="text-lg md:text-xl font-light text-neutral-500 max-w-3xl leading-relaxed group-hover:text-neutral-300 transition-colors">
+                                    <h4 className="text-lg md:text-xl text-soft mb-4 md:mb-6 flex items-center gap-2"><Briefcase size={18} /> {exp.role}</h4>
+                                    <p className="text-lg md:text-xl font-light text-soft max-w-3xl leading-relaxed group-hover:text-soft transition-colors">
                                         {exp.description}
                                     </p>
                                 </div>
@@ -318,7 +318,7 @@ const Home = () => {
                 <SectionHeading title="Delivery Workflow" subtitle="How I take React/Node ideas from notes to deployed, stable releases." centered />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 relative mt-16 md:mt-20">
-                    <div className="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-neutral-100 z-0" />
+                    <div className="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-bg z-0" />
                     {PROCESS_STEPS.map((step, i) => (
                         <motion.div
                             key={i}
@@ -328,28 +328,28 @@ const Home = () => {
                             transition={{ delay: i * 0.1 }}
                             className="relative z-10 text-center group"
                         >
-                            <div className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full bg-white border-2 border-neutral-200 flex items-center justify-center mb-6 md:mb-8 group-hover:border-black group-hover:scale-110 transition-all duration-300 shadow-xl shadow-neutral-100">
-                                <div className="text-neutral-400 group-hover:text-black transition-colors">{step.icon}</div>
+                            <div className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full bg-surface border-2 border-border flex items-center justify-center mb-6 md:mb-8 group-hover:border-contrast group-hover:scale-110 transition-all duration-300 shadow-card">
+                                <div className="text-soft group-hover:text-ink transition-colors">{step.icon}</div>
                             </div>
                             <h3 className="font-display font-bold uppercase mb-4 text-base md:text-lg">0{i + 1}. {step.title}</h3>
-                            <p className="text-xs md:text-sm text-neutral-500 leading-relaxed px-2">{step.description}</p>
+                            <p className="text-xs md:text-sm text-soft leading-relaxed px-2">{step.description}</p>
                         </motion.div>
                     ))}
                 </div>
             </section>
 
             {/* Skills Section */}
-            <section id="skills" className="py-24 md:py-40 bg-neutral-950 text-white px-6">
+            <section id="skills" className="py-24 md:py-40 bg-contrast text-surface px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-16 md:mb-24">
                         <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-tighter uppercase">Technical Stack</h2>
-                        <div className="h-1 w-24 bg-white" />
+                        <div className="h-1 w-24 bg-surface" />
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-20">
                         {SKILL_GROUPS.map((group, idx) => (
                             <div key={idx} className="space-y-8 md:space-y-10">
-                                <div className="flex items-center gap-4 border-b border-white/20 pb-4">
+                                <div className="flex items-center gap-4 border-b border-surface/20 pb-4">
                                     {group.icon}
                                     <h3 className="font-display font-bold text-xl md:text-2xl uppercase tracking-tight">{group.title}</h3>
                                 </div>
@@ -363,8 +363,8 @@ const Home = () => {
                                             transition={{ delay: sIdx * 0.05 }}
                                             className="flex items-center justify-between group cursor-default"
                                         >
-                                            <span className="font-mono text-sm md:text-base text-neutral-400 group-hover:text-white transition-colors">{skill}</span>
-                                            <div className="w-1.5 h-1.5 rounded-full bg-neutral-800 group-hover:bg-green-500 transition-colors" />
+                                            <span className="font-mono text-sm md:text-base text-soft group-hover:text-surface transition-colors">{skill}</span>
+                                            <div className="w-1.5 h-1.5 rounded-full bg-soft group-hover:bg-success transition-colors" />
                                         </motion.div>
                                     ))}
                                 </div>
@@ -386,19 +386,19 @@ const Home = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             whileHover={{ y: -10 }}
-                            className={`p-8 md:p-10 bg-white border border-neutral-200 flex flex-col hover:border-black hover:shadow-2xl transition-all duration-300 ${project.featured ? 'md:col-span-2 lg:col-span-1 border-black shadow-lg bg-neutral-50' : ''}`}
+                            className={`p-8 md:p-10 bg-surface border border-border flex flex-col hover:border-contrast hover:shadow-2xl transition-all duration-300 ${project.featured ? 'md:col-span-2 lg:col-span-1 border-contrast shadow-lg bg-bg' : ''}`}
                         >
-                            <div className="mb-6 md:mb-8 flex items-center justify-between border-b border-neutral-200 pb-4">
-                                <span className="text-[10px] font-bold tracking-[0.3em] text-neutral-400">SYS_0{idx + 1}</span>
-                                {project.featured && <span className="text-[10px] font-bold bg-black text-white px-2 py-1 uppercase tracking-wider">Featured</span>}
+                            <div className="mb-6 md:mb-8 flex items-center justify-between border-b border-border pb-4">
+                                <span className="text-[10px] font-bold tracking-[0.3em] text-soft">SYS_0{idx + 1}</span>
+                                {project.featured && <span className="text-[10px] font-bold bg-contrast text-surface px-2 py-1 uppercase tracking-wider">Featured</span>}
                             </div>
 
                             <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 uppercase leading-none">{project.title}</h3>
-                            <p className="text-sm md:text-base text-neutral-500 mb-8 flex-grow font-light leading-relaxed">{project.description}</p>
+                            <p className="text-sm md:text-base text-soft mb-8 flex-grow font-light leading-relaxed">{project.description}</p>
 
                             <div className="flex flex-wrap gap-2 mb-8 md:mb-10">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className="text-[10px] font-mono font-bold uppercase border border-neutral-200 px-3 py-1 text-neutral-600">{tag}</span>
+                                    <span key={tag} className="text-[10px] font-mono font-bold uppercase border border-border px-3 py-1 text-muted">{tag}</span>
                                 ))}
                             </div>
 
@@ -411,7 +411,7 @@ const Home = () => {
                                 >
                                     Live <span className="hidden sm:inline">Demo</span> <ExternalLink size={12} />
                                 </a>
-                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="ml-auto text-neutral-400 hover:text-black transition-colors"><Github size={20} /></a>
+                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="ml-auto text-soft hover:text-ink transition-colors"><Github size={20} /></a>
                             </div>
                         </motion.div>
                     ))}
@@ -419,10 +419,10 @@ const Home = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-24 md:py-40 px-6 max-w-4xl mx-auto border-t border-neutral-200">
+            <section className="py-24 md:py-40 px-6 max-w-4xl mx-auto border-t border-border">
                 <div className="text-center mb-16 md:mb-24">
                     <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 uppercase">FAQs</h2>
-                    <p className="text-sm md:text-base text-neutral-500">How I ship projects, structure data, and communicate.</p>
+                    <p className="text-sm md:text-base text-soft">How I ship projects, structure data, and communicate.</p>
                 </div>
                 <div className="grid gap-6 md:gap-8">
                     {FAQS.map((faq, i) => (
@@ -431,12 +431,12 @@ const Home = () => {
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="p-6 md:p-8 border border-neutral-200 hover:border-black transition-colors bg-neutral-50"
+                            className="p-6 md:p-8 border border-border hover:border-contrast transition-colors bg-bg"
                         >
                             <h4 className="font-display font-bold text-lg md:text-xl uppercase mb-4 flex items-start gap-3">
-                                <span className="text-neutral-300">Q.</span> {faq.q}
+                                <span className="text-soft">Q.</span> {faq.q}
                             </h4>
-                            <p className="font-light text-neutral-600 leading-relaxed pl-6 md:pl-8 border-l border-neutral-300 text-base md:text-lg">
+                            <p className="font-light text-muted leading-relaxed pl-6 md:pl-8 border-l border-border text-base md:text-lg">
                                 {faq.a}
                             </p>
                         </motion.div>
@@ -445,13 +445,13 @@ const Home = () => {
             </section>
 
             {/* Pricing Section CTA */}
-            <section className="py-24 md:py-40 px-6 max-w-7xl mx-auto bg-neutral-50 border-y border-neutral-200">
+            <section className="py-24 md:py-40 px-6 max-w-7xl mx-auto bg-bg border-y border-border">
                 <div className="text-center">
                     <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tighter mb-6 md:mb-8">Pricing</h2>
-                    <p className="text-lg md:text-xl text-neutral-500 font-light max-w-2xl mx-auto mb-10 md:mb-12">
+                    <p className="text-lg md:text-xl text-soft font-light max-w-2xl mx-auto mb-10 md:mb-12">
                         Choose a package or outline your scope for a custom quote.
                     </p>
-                    <a href="#/pricing" className="inline-block px-8 md:px-12 py-4 md:py-5 bg-black text-white font-bold uppercase tracking-[0.2em] text-xs md:text-sm hover:scale-105 transition-transform shadow-2xl">
+                    <a href="#/pricing" className="inline-block px-8 md:px-12 py-4 md:py-5 bg-contrast text-surface font-bold uppercase tracking-[0.2em] text-xs md:text-sm hover:scale-105 transition-transform shadow-2xl">
                         View Rate Card
                     </a>
                 </div>

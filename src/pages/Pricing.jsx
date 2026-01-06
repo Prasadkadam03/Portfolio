@@ -11,7 +11,8 @@ const PRICING_PLANS = [
         originalPrice: "₹2,000",
         unit: "/project",
         description: "Perfect for resumes, marketing pages, and lightweight product intros.",
-        features: ["React/Next.js + Tailwind UI", "Responsive & accessible layout", "Deployment to Vercel with custom domain guidance", "Essential SEO and analytics hooks", "3 revision loops included"]
+        features: ["React/Next.js + Tailwind UI", "Responsive & accessible layout", "Deployment to Vercel with custom domain guidance", "Essential SEO and analytics hooks", "3 revision loops included"],
+        badge: "Starter"
     },
     {
         title: "Full Stack MVP",
@@ -20,6 +21,7 @@ const PRICING_PLANS = [
         unit: "/project",
         description: "A complete dynamic application connecting your UI to a real database.",
         features: ["React/Next.js frontend with reusable components", "Node.js/Express REST APIs with JWT auth", "Zod/server-side validation + predictable error handling", "MongoDB or PostgreSQL schema setup (Mongoose/Prisma)", "Postman collection + API docs"],
+        badge: "Most popular"
 
 
     },
@@ -30,6 +32,7 @@ const PRICING_PLANS = [
         unit: "/project",
         description: "Low-latency deployments on Cloudflare Workers or Vercel edge.",
         features: ["Cloudflare Workers or Vercel functions", "JWT-protected routes and rate limiting", "Prisma/PostgreSQL or MongoDB data layer", "CI/CD hooks for quick iterations", "Performance + observability checks"],
+        badge: "Fastest"
 
 
     },
@@ -47,16 +50,16 @@ const PRICING_PLANS = [
 
 const Pricing = () => {
     return (
-        <div className="pt-24 md:pt-40 min-h-screen bg-white">
+        <div className="pt-24 md:pt-40 min-h-screen bg-surface">
             <div className="max-w-7xl mx-auto px-6">
                 <SectionHeading title="Pricing" subtitle="Pick a scope that fits your build or request a custom engagement." centered />
 
         <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-12 p-4 bg-green-50 border border-green-200 flex items-center justify-center gap-3 text-sm md:text-base text-green-800 rounded-lg"
+            className="mb-12 p-4 bg-success/10 border border-success/20 flex items-center justify-center gap-3 text-sm md:text-base text-success rounded-lg"
         >
-            <Info size={20} className="text-green-600" />
+            <Info size={20} className="text-success" />
             <span className="font-bold uppercase tracking-wide">Early Bird Offer:</span>
             <span>Limited availability pricing — lock your slot for this quarter.</span>
         </motion.div>
@@ -68,28 +71,33 @@ const Pricing = () => {
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="p-6 md:p-8 border border-neutral-200 bg-white hover:border-black transition-colors flex flex-col"
+                            className="p-6 md:p-8 border border-border bg-surface hover:border-contrast transition-colors flex flex-col relative overflow-hidden"
                         >
+                            {plan.badge && (
+                                <span className="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-[0.2em] bg-contrast text-surface px-3 py-1">
+                                    {plan.badge}
+                                </span>
+                            )}
                             <h3 className="text-base md:text-lg font-bold uppercase tracking-widest mb-4">{plan.title}</h3>
                             <div className="mb-6 flex items-baseline gap-2">
                                 {plan.originalPrice && (
-                                    <span className="text-neutral-400 line-through text-xs md:text-sm decoration-red-500/50">{plan.originalPrice}</span>
+                                    <span className="text-soft line-through text-xs md:text-sm decoration-danger/50">{plan.originalPrice}</span>
                                 )}
-                                <span className={`text-3xl md:text-4xl font-display font-bold ${plan.price === 'Custom' ? 'text-black' : 'text-green-600'}`}>{plan.price}</span>
-                                {plan.unit && <span className="text-neutral-500 text-xs md:text-sm">{plan.unit}</span>}
+                                <span className={`text-3xl md:text-4xl font-display font-bold ${plan.price === 'Custom' ? 'text-contrast' : 'text-success'}`}>{plan.price}</span>
+                                {plan.unit && <span className="text-soft text-xs md:text-sm">{plan.unit}</span>}
                             </div>
-                            <p className="text-neutral-500 font-light mb-8 text-sm min-h-[40px]">{plan.description}</p>
+                            <p className="text-soft font-light mb-8 text-sm min-h-[40px]">{plan.description}</p>
                             <ul className="space-y-4 mb-8 flex-grow">
                                 {plan.features.map((feature, fIdx) => (
-                                    <li key={fIdx} className="flex items-center gap-3 text-sm font-mono text-neutral-600">
-                                        <div className={`w-1.5 h-1.5 rounded-full ${plan.price === 'Custom' ? 'bg-black' : 'bg-green-500'}`} />
+                                    <li key={fIdx} className="flex items-center gap-3 text-sm font-mono text-muted">
+                                        <div className={`w-1.5 h-1.5 rounded-full ${plan.price === 'Custom' ? 'bg-contrast' : 'bg-success'}`} />
                                         {feature}
                                     </li>
                                 ))}
                             </ul>
                             <a
                                 href={`mailto:prasadkadam29503@gmail.com?subject=${encodeURIComponent(`Project Inquiry: ${plan.title}`)}&body=${encodeURIComponent(`I am interested in the ${plan.title} plan (${plan.price}).\n\nPlease contact me for further discussion.`)}`}
-                                className={`w-full py-3 border border-black text-center font-bold uppercase text-xs transition-colors ${plan.price === 'Custom' ? 'bg-black text-white hover:bg-neutral-800' : 'hover:bg-black hover:text-white'}`}
+                                className={`w-full py-3 border border-contrast text-center font-bold uppercase text-xs transition-colors ${plan.price === 'Custom' ? 'bg-contrast text-surface hover:bg-contrast/90' : 'hover:bg-contrast hover:text-surface'}`}
                             >
                                 {plan.buttonText || "Select Plan"}
                             </a>

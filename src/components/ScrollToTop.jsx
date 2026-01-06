@@ -21,6 +21,15 @@ export default function ScrollToTop() {
     }, [pathname]);
 
     useEffect(() => {
+        // Enforce smooth scroll for in-page jumps for a softer UI feel
+        const original = document.documentElement.style.scrollBehavior;
+        document.documentElement.style.scrollBehavior = 'smooth';
+        return () => {
+            document.documentElement.style.scrollBehavior = original;
+        };
+    }, []);
+
+    useEffect(() => {
         // Check if this is a page refresh (scroll position exists in sessionStorage)
         const savedScrollPosition = sessionStorage.getItem('scrollPosition');
         const savedPath = sessionStorage.getItem('scrollPath');

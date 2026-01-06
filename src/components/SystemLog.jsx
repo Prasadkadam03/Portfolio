@@ -44,27 +44,18 @@ const SystemLog = () => {
             "CHAI BREAK INITIATED... ☕ zaruri hai bhai",
             "CODE CHAL GAYA... matlab miracle ho gaya! 🎉",
             "BUG FIX HO GAYA... ab toh party banti hai 🎊",
-            "DEPLOYMENT CHALRI HAI... Bhagwan bharose 🙏",
-            "JUGAAD MODE ACTIVATED... desi style! 💪",
-            "INTERNET SLOW HAI... Jio fiber kab aayega? 🐌",
-            "CLIENT KA CALL AAYA... ab kya chahiye? 📞",
-            "DEADLINE KAL HAI... tension lene ka nahi 😎",
-            "YEH BHAI YEH... code chal gaya! 🎯",
-            "APNA TIME AAYEGA... deployment pending 🚀",
-            "MUMMY KASAM... bug fix kar dunga 🤞",
-            "ARRE BHAI BHAI BHAI... error aa gaya 😱",
-            "THODA ADJUST KAR LE... responsive nahi hai 📱",
-            "SAHI HAI BHAI... test cases pass! ✅",
-            "KAAM KHATAM... PR ready for review 📋",
-            "ARRE YAR... merge conflict phir se 😤",
-            "FULL SAPOT BHAI... backend se 🤝",
-            "BINOD BINOD... console.log('BINOD') 😂",
-            "RASODE MEIN KAUN THA... debugging in progress 🔍",
-            "SYSTEM PE SYSTEM... baithara hai chhora jaat ka 🎶",
-            "AAYEIN?... error kahan se aaya? 🍆",
-            "GADDARI KORBE... code fat gaya 🗡️",
-            "MAZA AAYA... bug fix karke 😂",
-            "KHATAM TATA BYE BYE... deployment complete 👋"
+            "KHATAM TATA BYE BYE... deployment complete 👋",
+            "APPRAISAL KI UMEED... loading 0% 📉",
+            "PER MY LAST EMAIL... (tujhe samajh nahi aata kya?) 📧",
+            "FRIDAY EVENING... aur ek urgent task? 😭",
+            "PIZZA PARTY... increment ki jagah 🍕",
+            "STAKEHOLDERS ARE HAPPY... main kab khush hounga? 🥲",
+            "IT WORKS ON MY MACHINE... hosting check kar lo 💻",
+            "NODE_MODULES IS HEAVIER THAN MY SIN... 🏋️‍♂️",
+            "VIM SE EXIT KAISE KAREIN... stuck forever 🔒",
+            "LEGACY CODE TOUCH MAT KARNA... bomb hai 💣",
+            "GIT COMMIT -m 'fix'... (15th time in a row) 🔁",
+            "CENTERING A DIV... the final boss fight 👾"
         ];
 
         const logInterval = setInterval(() => {
@@ -97,33 +88,34 @@ const SystemLog = () => {
         <motion.div
             ref={containerRef}
             style={{ opacity, scale }}
-            className="w-full max-w-4xl mx-auto mt-10 md:mt-20 border border-white/20 bg-white/10 backdrop-blur-md font-mono text-[10px] text-neutral-700 shadow-xl rounded-lg overflow-hidden"
+            className="w-full max-w-4xl mx-auto mt-10 md:mt-20 border border-surface/20 bg-surface/10 backdrop-blur-md font-mono text-[10px] text-muted rounded-lg overflow-hidden shadow-card"
         >
-            <div className="flex border-b border-white/20 bg-gradient-to-r from-white/5 to-transparent px-3 md:px-4 py-2 justify-between items-center backdrop-blur-sm">
+            <div className="flex border-b border-surface/20 bg-gradient-to-r from-surface/5 to-transparent px-3 md:px-4 py-2 justify-between items-center backdrop-blur-sm">
                 <div className="flex gap-4">
                     <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-green-400 animate-pulse shadow-lg shadow-green-400/50" />
-                        <span className="font-bold tracking-widest uppercase text-[8px] md:text-[10px] text-neutral-800">System Status: ONLINE</span>
+                        <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-success animate-pulse shadow-success" />
+                        <span className="font-bold tracking-widest uppercase text-[8px] md:text-[10px] text-ink">System Status: ONLINE</span>
                     </div>
-                    <div className="hidden md:flex gap-4 text-neutral-600">
-                        <span className="transition-colors hover:text-neutral-800">CPU: {stats.cpu}%</span>
-                        <span className="transition-colors hover:text-neutral-800">MEM: {stats.mem}GB</span>
-                        <span className="transition-colors hover:text-neutral-800">NET: {stats.net}ms</span>
+                    <div className="hidden md:flex gap-4 text-muted">
+                        <span className="transition-colors hover:text-ink">CPU: {stats.cpu}%</span>
+                        <span className="transition-colors hover:text-ink">MEM: {stats.mem}GB</span>
+                        <span className="transition-colors hover:text-ink">NET: {stats.net}ms</span>
+                        <span className="transition-colors hover:text-ink bg-surface/40 px-2 py-1 rounded-md border border-surface/30 font-semibold">UP: 99.9%</span>
                     </div>
                 </div>
-                <div className="text-neutral-500 text-[8px] md:text-[10px] font-semibold">V.2.0.4</div>
+                <div className="text-soft text-[8px] md:text-[10px] font-semibold">V.2.0.4</div>
             </div>
 
-            <div className="p-3 md:p-4 h-32 md:h-40 overflow-hidden relative bg-gradient-to-b from-white/5 to-white/10">
-                <div className="absolute inset-x-0 bottom-0 h-10 md:h-12 bg-gradient-to-t from-white/30 via-white/10 to-transparent pointer-events-none z-10" />
+            <div className="p-3 md:p-4 h-32 md:h-40 overflow-hidden relative bg-gradient-to-b from-surface/5 to-surface/10">
+                <div className="absolute inset-x-0 bottom-0 h-10 md:h-12 bg-gradient-to-t from-surface/30 via-surface/10 to-transparent pointer-events-none z-10" />
                 {logs.map((log, i) => (
                     <motion.div
                         key={i}
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="mb-1 font-medium truncate text-[9px] md:text-[10px] text-neutral-700"
+                        className="mb-1 font-medium truncate text-[9px] md:text-[10px] text-muted"
                     >
-                        <span className="text-neutral-400 mr-2">{'>'}</span>{log}
+                        <span className="text-soft mr-2">{'>'}</span>{log}
                     </motion.div>
                 ))}
             </div>

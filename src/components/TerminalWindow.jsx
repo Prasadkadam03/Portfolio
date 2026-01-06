@@ -75,31 +75,37 @@ const TerminalWindow = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="w-full max-w-xl bg-neutral-950 rounded-xl overflow-hidden shadow-2xl font-mono text-xs border border-neutral-800 relative z-20 cursor-text"
+            className="w-full max-w-xl bg-contrast text-surface rounded-xl overflow-hidden font-mono text-xs border border-contrast/40 shadow-card relative z-20 cursor-text"
             onClick={handleContainerClick}
         >
-            <div className="bg-neutral-900 px-4 py-2 flex items-center gap-2 border-b border-neutral-800">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-                <div className="ml-auto text-neutral-500 font-bold text-[8px] md:text-[10px] tracking-widest">BASH -- ZSH</div>
+            <div className="bg-contrast/90 px-4 py-2 flex items-center gap-2 border-b border-contrast/50">
+                <div className="w-2.5 h-2.5 rounded-full bg-danger/80" />
+                <div className="w-2.5 h-2.5 rounded-full bg-warn/80" />
+                <div className="w-2.5 h-2.5 rounded-full bg-success/80" />
+                <div className="ml-auto text-soft font-bold text-[8px] md:text-[10px] tracking-widest">BASH -- ZSH</div>
             </div>
-            <div ref={scrollRef} className="p-4 md:p-6 h-48 md:h-64 overflow-y-auto space-y-2 text-neutral-300 font-medium text-[10px] md:text-xs">
+            <div className="flex items-center gap-2 px-4 py-2 bg-contrast/70 text-[10px] text-soft border-b border-contrast/50">
+                <span className="px-2 py-1 rounded-full bg-surface/10 border border-surface/10 text-surface/80 font-semibold">help</span>
+                <span className="px-2 py-1 rounded-full bg-surface/10 border border-surface/10 text-surface/80 font-semibold">projects</span>
+                <span className="px-2 py-1 rounded-full bg-surface/10 border border-surface/10 text-surface/80 font-semibold">skills</span>
+                <span className="px-2 py-1 rounded-full bg-surface/10 border border-surface/10 text-surface/80 font-semibold">contact</span>
+            </div>
+            <div ref={scrollRef} className="p-4 md:p-6 h-48 md:h-64 overflow-y-auto space-y-2 text-surface/80 font-medium text-[10px] md:text-xs">
                 {history.map((entry, i) => (
                     <div key={i} className={
-                        entry.type === 'system' ? 'text-green-500' :
-                            entry.type === 'error' ? 'text-red-500' :
-                                'text-neutral-300'
+                        entry.type === 'system' ? 'text-success' :
+                            entry.type === 'error' ? 'text-danger' :
+                                'text-surface/80'
                     }>
                         <span className="opacity-50 mr-2">{entry.type === 'user' ? '$' : '>'}</span>
                         {entry.content}
                     </div>
                 ))}
-                <div className="flex items-center text-neutral-300">
+                <div className="flex items-center text-surface/80">
                     <span className="opacity-50 mr-2">$</span>
                     <input
                         ref={inputRef}
-                        className="bg-transparent border-none outline-none flex-1 text-neutral-300 placeholder-neutral-700"
+                        className="bg-transparent border-none outline-none flex-1 text-surface/80 placeholder-surface/40"
                         autoFocus
                         value={input}
                         onChange={(e) => setInput(e.target.value)}

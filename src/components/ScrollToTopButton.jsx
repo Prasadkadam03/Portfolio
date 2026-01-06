@@ -31,14 +31,14 @@ const ScrollToTopButton = () => {
             {isVisible && (
                 <motion.button
                     initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 0.4, scale: 1 }}
+                    animate={{ opacity: 0.55, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
-                    whileHover={{ opacity: 0.8, scale: 1.1 }}
+                    whileHover={{ opacity: 0.95, scale: 1.08, translateY: -2 }}
                     onClick={scrollToTop}
-                    className="fixed bottom-8 right-8 z-50 p-2 bg-black text-white rounded-full shadow-lg transition-all duration-300"
+                    className="fixed bottom-8 right-8 z-50 p-3 rounded-full border border-soft bg-brand-gradient text-surface shadow-strong"
                     aria-label="Scroll to top"
                 >
-                    <ArrowUp size={16} />
+                    <ArrowUp size={18} />
                 </motion.button>
             )}
         </AnimatePresence>

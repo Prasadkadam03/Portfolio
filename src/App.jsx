@@ -12,13 +12,13 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-white text-black font-body selection:bg-black selection:text-white overflow-x-hidden">
+      <div className="min-h-screen bg-surface-gradient text-ink font-body overflow-x-hidden">
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@700&display=swap');
           .font-display { font-family: 'Space Grotesk', sans-serif; }
           .font-body { font-family: 'Inter', sans-serif; }
           .font-mono { font-family: 'JetBrains Mono', monospace; }
-          .outline-text { -webkit-text-stroke: 1.5px black; color: transparent; }
+          .outline-text { -webkit-text-stroke: 1.5px var(--color-contrast); color: transparent; }
         `}</style>
 
         <ScrollProgress />
