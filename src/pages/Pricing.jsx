@@ -7,16 +7,16 @@ import Footer from '../components/Footer';
 const PRICING_PLANS = [
     {
         title: "Landing Page / Portfolio",
-        price: "₹1,399",
-        originalPrice: "₹2,000",
+        price: "₹5,399",
+        originalPrice: "₹7,000",
         unit: "/project",
         description: "Perfect for resumes, marketing pages, and lightweight product intros.",
         features: ["React/Next.js + Tailwind UI", "Responsive & accessible layout", "Deployment to Vercel with custom domain guidance", "Essential SEO and analytics hooks", "3 revision loops included"]
     },
     {
         title: "Full Stack MVP",
-        price: "₹4,399",
-        originalPrice: "₹6,000",
+        price: "₹7,399",
+        originalPrice: "₹9,000",
         unit: "/project",
         description: "A complete dynamic application connecting your UI to a real database.",
         features: ["React/Next.js frontend with reusable components", "Node.js/Express REST APIs with JWT auth", "Zod/server-side validation + predictable error handling", "MongoDB or PostgreSQL schema setup (Mongoose/Prisma)", "Postman collection + API docs"],
@@ -25,8 +25,8 @@ const PRICING_PLANS = [
     },
     {
         title: "Edge/Serverless App",
-        price: "₹6,999",
-        originalPrice: "₹9,500",
+        price: "₹10,999",
+        originalPrice: "₹12,500",
         unit: "/project",
         description: "Low-latency deployments on Cloudflare Workers or Vercel edge.",
         features: ["Cloudflare Workers or Vercel functions", "JWT-protected routes and rate limiting", "Prisma/PostgreSQL or MongoDB data layer", "CI/CD hooks for quick iterations", "Performance + observability checks"],
