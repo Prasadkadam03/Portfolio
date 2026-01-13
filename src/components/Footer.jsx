@@ -162,7 +162,7 @@ const Footer = () => {
                     </div>
 
                     <div className="text-neutral-500 text-sm font-mono">
-                        © 2025 Prasad Kadam. All Rights Reserved.
+                        © 2026 Prasad Kadam. All Rights Reserved.
                     </div>
 
                     <div className="flex gap-6">
