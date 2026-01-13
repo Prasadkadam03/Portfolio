@@ -471,85 +471,89 @@ const Home = () => {
             </section>
 
             {/* Contact / Hiring */}
-            <section id="contact" className="py-24 md:py-32 px-1 md:px-6 max-w-7xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
-                    <div className="space-y-6">
-                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-neutral-400">Ready to Hire</p>
-                        <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight uppercase leading-[1.05]">Let's ship your next release</h2>
-                        <p className="text-base md:text-xl text-neutral-600 leading-relaxed">
-                            I build production React/TypeScript frontends and Node.js/Express APIs with JWT auth, Zod validation, and tuned MongoDB/PostgreSQL queries. Currently at VIZIPP; open to full-time roles and freelance/contract work. I reply within one business day.
-                        </p>
-                        <div className="flex flex-wrap gap-2 md:gap-3 text-sm md:text-base text-neutral-700">
-                            <span className="px-3 py-2 rounded-xl bg-neutral-100 border border-neutral-200">Frontend: React, Next.js, Angular</span>
-                            <span className="px-3 py-2 rounded-xl bg-neutral-100 border border-neutral-200">Backend: Node.js, Express, REST, JWT</span>
-                            <span className="px-3 py-2 rounded-xl bg-neutral-100 border border-neutral-200">Databases: MongoDB, PostgreSQL, MySQL</span>
-                            <span className="px-3 py-2 rounded-xl bg-neutral-100 border border-neutral-200">Collaboration: Git/GitHub, Postman, CI/CD (learning)</span>
+            <section id="contact" className="py-20 md:py-32 px-4 md:px-6 max-w-7xl mx-auto">
+    <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-start">
+        {/* Left Column: Content */}
+        <div className="space-y-6 md:pr-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-neutral-400">Ready to Hire</p>
+            <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight uppercase leading-[1.1] text-balance">
+                Let's ship your next release
+            </h2>
+            <p className="text-base md:text-xl text-neutral-600 leading-relaxed max-w-2xl">
+                I build production React/TypeScript frontends and Node.js/Express APIs with JWT auth, Zod validation, and tuned MongoDB/PostgreSQL queries. Currently at VIZIPP; open to full-time roles and freelance/contract work. I reply within one business day.
+            </p>
+            
+            {/* Tech Tags - Adjusted for better wrapping */}
+            <div className="flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm text-neutral-700">
+                <span className="px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200">Frontend: React, Next.js</span>
+                <span className="px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200">Backend: Node.js, Express</span>
+                <span className="px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200">Databases: MongoDB, SQL</span>
+                <span className="px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200">Git/GitHub, CI/CD</span>
+            </div>
+        </div>
+
+        {/* Right Column: Contact Card */}
+        <div className="bg-white border border-neutral-200 rounded-3xl shadow-xl p-5 md:p-8 space-y-6 w-full">
+            <div className="flex items-center gap-3 pb-2">
+                <div className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
+                <p className="text-xs font-mono font-medium text-neutral-500 uppercase tracking-wider">Taking new engagements now</p>
+            </div>
+
+            <div className="space-y-3">
+                {/* Email Item */}
+                <a href="mailto:prasadkadam29503@gmail.com" className="group flex items-start justify-between gap-4 p-4 border border-neutral-200 rounded-2xl hover:border-black hover:shadow-sm transition-all">
+                    <div className="flex items-start gap-3 min-w-0">
+                        <div className="p-2.5 bg-neutral-100 rounded-xl group-hover:bg-black group-hover:text-white transition-colors">
+                            <Mail size={20} />
+                        </div>
+                        <div className="min-w-0">
+                            <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold mb-0.5">Email</p>
+                            <p className="text-neutral-900 font-semibold break-all text-sm md:text-base">prasadkadam29503@gmail.com</p>
                         </div>
                     </div>
+                    <span className="hidden sm:inline-block text-[10px] font-bold uppercase tracking-[0.1em] text-neutral-400 shrink-0 mt-1">Reply &lt;24h</span>
+                </a>
 
-                    <div className="bg-white border border-neutral-200 rounded-2xl shadow-xl p-4 md:p-8 space-y-6 w-full">
-                        <div className="flex items-center gap-3">
-                            <div className="h-3 w-3 rounded-full bg-green-500 animate-pulse" />
-                            <p className="text-sm font-mono text-neutral-500">Taking new engagements now</p>
+                {/* Call Item */}
+                <a href="tel:+918055907280" className="group flex items-start justify-between gap-4 p-4 border border-neutral-200 rounded-2xl hover:border-black hover:shadow-sm transition-all">
+                    <div className="flex items-start gap-3 min-w-0">
+                        <div className="p-2.5 bg-neutral-100 rounded-xl group-hover:bg-black group-hover:text-white transition-colors">
+                            <Phone size={20} />
                         </div>
-
-                        <div className="space-y-4">
-                            <a href="mailto:prasadkadam29503@gmail.com" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 border border-neutral-200 rounded-xl hover:border-black hover:shadow-md transition-all">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-neutral-100 rounded-lg"><Mail size={18} /></div>
-                                    <div>
-                                        <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 font-bold">Email</p>
-                                        <p className="text-neutral-900 font-semibold break-words">prasadkadam29503@gmail.com</p>
-                                    </div>
-                                </div>
-                                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-400">Reply &lt;24h</span>
-                            </a>
-
-                            <a href="tel:+918055907280" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 border border-neutral-200 rounded-xl hover:border-black hover:shadow-md transition-all">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-neutral-100 rounded-lg"><Phone size={18} /></div>
-                                    <div>
-                                        <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 font-bold">Call</p>
-                                        <p className="text-neutral-900 font-semibold">+91 80559 07280</p>
-                                    </div>
-                                </div>
-                                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-400">IST</span>
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/prasadkadam03/" target="_blank" rel="noreferrer" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 border border-neutral-200 rounded-xl hover:border-black hover:shadow-md transition-all">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-neutral-100 rounded-lg"><ExternalLink size={18} /></div>
-                                    <div>
-                                        <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 font-bold">LinkedIn</p>
-                                        <p className="text-neutral-900 font-semibold break-words">linkedin.com/in/prasadkadam03</p>
-                                    </div>
-                                </div>
-                                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-400">Open</span>
-                            </a>
-
-                            <a href="https://github.com/prasadkadam03" target="_blank" rel="noreferrer" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 border border-neutral-200 rounded-xl hover:border-black hover:shadow-md transition-all">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-neutral-100 rounded-lg"><Github size={18} /></div>
-                                    <div>
-                                        <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 font-bold">GitHub</p>
-                                        <p className="text-neutral-900 font-semibold break-words">github.com/prasadkadam03</p>
-                                    </div>
-                                </div>
-                                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-neutral-400">Open Source</span>
-                            </a>
-                        </div>
-
-                        <div className="flex flex-wrap gap-3">
-                            <a href="/#/pricing" className="px-5 py-3 bg-black text-white font-bold uppercase tracking-[0.2em] text-[11px] rounded-lg hover:scale-[1.02] transition-transform">
-                                View Pricing / Rates
-                            </a>
-                            <a href="https://drive.google.com/drive/folders/1GAf5XFtumVJgHiWj9p4yz45hB3_40kCt?usp=drive_link" target="_blank" rel="noopener noreferrer" className="px-5 py-3 border border-neutral-300 text-neutral-800 font-bold uppercase tracking-[0.2em] text-[11px] rounded-lg hover:border-black">
-                                Download Resume
-                            </a>
+                        <div className="min-w-0">
+                            <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold mb-0.5">Call</p>
+                            <p className="text-neutral-900 font-semibold text-sm md:text-base">+91 80559 07280</p>
                         </div>
                     </div>
-                </div>
-            </section>
+                    <span className="hidden sm:inline-block text-[10px] font-bold uppercase tracking-[0.1em] text-neutral-400 shrink-0 mt-1">IST (GMT+5:30)</span>
+                </a>
+
+                {/* LinkedIn Item */}
+                <a href="https://www.linkedin.com/in/prasadkadam03/" target="_blank" rel="noreferrer" className="group flex items-start justify-between gap-4 p-4 border border-neutral-200 rounded-2xl hover:border-black hover:shadow-sm transition-all">
+                    <div className="flex items-start gap-3 min-w-0">
+                        <div className="p-2.5 bg-neutral-100 rounded-xl group-hover:bg-black group-hover:text-white transition-colors">
+                            <ExternalLink size={20} />
+                        </div>
+                        <div className="min-w-0">
+                            <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold mb-0.5">LinkedIn</p>
+                            <p className="text-neutral-900 font-semibold truncate text-sm md:text-base">in/prasadkadam03</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <a href="/#/pricing" className="flex items-center justify-center px-6 py-4 bg-black text-white font-bold uppercase tracking-[0.15em] text-[11px] rounded-xl hover:bg-neutral-800 transition-colors text-center">
+                    View Pricing / Rates
+                </a>
+                <a href="https://drive.google.com/drive/folders/..." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-4 border border-neutral-300 text-neutral-800 font-bold uppercase tracking-[0.15em] text-[11px] rounded-xl hover:border-black transition-colors text-center">
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
             {/* Pricing Section CTA */}
             <section className="py-24 md:py-40 px-6 max-w-7xl mx-auto bg-neutral-50 border-y border-neutral-200">
