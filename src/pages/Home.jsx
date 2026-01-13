@@ -198,7 +198,7 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="inline-flex items-center gap-3 px-4 py-2 bg-neutral-50 border border-neutral-200 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase"
+                            className="inline-flex items-center gap-3 px-4 py-2 bg-neutral-50 border border-neutral-200 rounded text-[10px] font-bold tracking-[0.2em] uppercase"
                         >
                             <div className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
@@ -286,7 +286,7 @@ const Home = () => {
                                 whileHover={{ y: -10 }}
                                 className="p-8 md:p-10 bg-white border border-neutral-200 hover:border-black hover:shadow-2xl transition-all duration-500 group"
                             >
-                                <div className="mb-6 md:mb-8 p-4 bg-neutral-50 w-fit rounded-xl group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                                <div className="mb-6 md:mb-8 p-4 bg-neutral-50 w-fit rounded group-hover:bg-black group-hover:text-white transition-colors duration-300">
                                     {s.icon}
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-display font-bold mb-4 uppercase tracking-tight">{s.title}</h3>

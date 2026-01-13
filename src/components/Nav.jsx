@@ -161,7 +161,7 @@ const Nav = () => {
                                         </div>
                                     </div>
 
-                                    <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
+                                    <div className="p-5 bg-white/5 border border-white/10 rounded">
                                         <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-2">System Status</div>
                                         <div className="flex items-center justify-between">
                                             <span className="text-white text-xs font-mono">OPERATIONAL</span>

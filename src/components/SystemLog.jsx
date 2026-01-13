@@ -68,7 +68,7 @@ const SystemLog = () => {
         <motion.div
             ref={containerRef}
             style={{ opacity, scale }}
-            className="w-full max-w-4xl mx-auto mt-10 md:mt-20 border border-white/20 bg-white/10 backdrop-blur-md font-mono text-[10px] text-neutral-700 shadow-xl rounded-lg overflow-hidden"
+            className="w-full max-w-4xl mx-auto py-2 mt-10 md:mt-20 border border-white/20 bg-white/10 backdrop-blur-md font-mono text-[10px] text-neutral-700 shadow-xl rounded overflow-hidden"
         >
             <div className="flex border-b border-white/20 bg-linear-to-r from-white/5 to-transparent px-3 md:px-4 py-2 justify-between items-center backdrop-blur-sm">
                 <div className="flex gap-4">
