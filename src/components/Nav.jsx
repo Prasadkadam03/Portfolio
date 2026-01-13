@@ -63,8 +63,10 @@ const Nav = () => {
         <nav className="fixed top-0 w-full z-10000 bg-white border-b border-black/5">
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <Link to="/" onClick={() => setIsOpen(false)} className="font-mono font-bold text-black tracking-widest text-lg uppercase flex items-center gap-2 z-70">
-                    <div className="w-3 h-3 bg-black rounded-full animate-pulse" />
-                    Prasad Kadam
+                    <div className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full  bg-black opacity-75"></span>
+                        <span className="relative inline-flex  h-2 w-2 bg-black"></span>
+                    </div>                    Prasad Kadam
                 </Link>
 
                 {/* Desktop Menu */}
@@ -88,7 +90,7 @@ const Nav = () => {
                 {/* Mobile Toggle */}
                 <button
                     onClick={toggleMenu}
-                    className={`md:hidden p-2 z-100 transition-colors rounded-lg flex items-center gap-2 ${isOpen ? 'text-white hover:bg-white/10' : 'text-black hover:bg-neutral-100'}`}
+                    className={`md:hidden p-2 z-100 transition-colors flex items-center gap-2 ${isOpen ? 'text-white hover:bg-white/10' : 'text-black hover:bg-neutral-100'}`}
                     aria-label="Toggle Menu"
                 >
                     <span className="text-[10px] font-bold uppercase tracking-widest hidden sm:block">
@@ -131,7 +133,7 @@ const Nav = () => {
                         >
                             <div className="flex flex-col h-full overflow-y-auto">
                                 <div className="text-neutral-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-8 flex items-center gap-3 shrink-0">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                                    <div className="w-1.5 h-1.5 bg-green-500 animate-pulse" />
                                     Navigation Hub
                                 </div>
 
